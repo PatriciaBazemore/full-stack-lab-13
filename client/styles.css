@@ -1,0 +1,52 @@
+
+
+
+#textfield {
+    background-color: grey;
+    color: plum;
+    
+
+}
+
+#chirpbox {
+    position: relative;
+    height: 150px;
+    width: 600px;
+    margin: 20px;
+    padding: 2px;
+    background-image: url("images/birds chirping.jpg");
+    background-color: teal;
+    border: 5px purple solid;
+}
+
+#chirpfield {
+    position: relative;
+    height: 100px;
+    width: 550px;
+    border-width: 5px;
+    border-color: red;
+    margin: 20px 60px 20px 60px;
+    padding: 20px 60px 20px 60px;
+    
+}
+
+#btn {
+    position: relative;
+    right: 100px;
+    border: 5px red solid;
+    float: right;
+    clear: both;
+}
+
+#chirplist {
+    position: relative;
+    padding: 20px 60px 20px 60px;
+    margin: 20px 60px 20px 60px;
+    border: 5px purple solid;
+    background-color: teal;
+}
+
+#btnbox {
+    height: 5px;
+    
+}
