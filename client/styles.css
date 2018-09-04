@@ -1,49 +1,67 @@
 
+/* .jumbotron{
+    background-image: url(‘images/birds-chirping.jpg’) fixed center no-repeat; */
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2px;
+} */
 
 
 #textfield {
     background-color: grey;
-    color: plum;
+    color: plum; 
     
-
 }
 
 #chirpbox {
-    position: relative;
-    height: 150px;
-    width: 600px;
-    margin: 20px;
-    padding: 2px;
-    background-image: url("images/birds chirping.jpg");
+    /* position: relative; */
+    height: 25em;
+    width: cover;
+    margin: 0px;
+    padding-left: 20em;
+    padding-top: 17em;
+    background-image: url("images/birds-chirping.jpg");
     background-color: teal;
+    background-size: cover;
     border: 5px purple solid;
 }
 
 #chirpfield {
-    position: relative;
-    height: 100px;
-    width: 550px;
+    /* position: fixed; */
+    height: 80px;
+    width: 750px;
     border-width: 5px;
     border-color: red;
-    margin: 20px 60px 20px 60px;
-    padding: 20px 60px 20px 60px;
+    /* margin: 20px 60px 20px 60px;
+    padding: 20px 60px 20px 60px; */
+    text-align: center;
     
 }
 
+#userfield {
+    border-color: red;
+    border-width: 3px;
+    vertical-align: bottom;
+}
+
 #btn {
-    position: relative;
+  
     right: 100px;
     border: 5px red solid;
     float: right;
     clear: both;
+    background-color: teal;
+    color: red;
+    vertical-align: bottom;
 }
 
 #chirplist {
-    position: relative;
+    /* position: absolute; */
     padding: 20px 60px 20px 60px;
-    margin: 20px 60px 20px 60px;
+    margin: 50px 60px 20px 60px;
     border: 5px purple solid;
     background-color: teal;
+    text-align: center;
 }
 
 #btnbox {

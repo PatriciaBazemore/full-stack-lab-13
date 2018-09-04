@@ -11,15 +11,32 @@
 
     </head>
     <body>
-        <div id='chirpbox' class="container chirp-box">
-            <row><div class="col-md-4"><input type="text" id="chirpfield" chirp="div" placeholder="Write your chirp here!">
-           <button class="btn" id="btn" disabled>Chirp!</button></div></row>
             
-        </div>
-        <div id="chirplist">
-        
-        </div>
+            <div id="chirpbox" class="jumbotron">
+                    
+                    <input  type="text" id="chirpfield" chirp="div" placeholder="Write your chirp here!">
+                    <input  type="text" id="userfield" user="div" placeholder="Enter your name here!">
+                    <button class="btn" id="btn" disabled>Post Chirp!</button>    
+                   
+            </div>   
+            
+           
 
+            
+            <!-- <div class="row">
+                    <div class="span9">
+                      Level 1 column
+                      <div class="row">
+                        <div class="span6">Level 2</div>
+                        <div class="span3">Level 2</div>
+                      </div>
+                    </div>
+                  </div> -->
+
+
+
+            <div  id="chirplist"></div>
+        
 
         <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
         <script src='scripts.js'></script>

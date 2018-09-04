@@ -1,22 +1,37 @@
 var $chirpButton = $('#btn');
 var $chirpField = $('#chirpfield');
 var $chirpList = $('#chirplist');
+var $userField = $('#userfield');
 
 $chirpField.on('input', function() {
-    var isEmpty = $chirpField.val().length === 0;  //returns true or false
-    // if (isEmpty) {
+    var isEmpty = $chirpField.val().length === 0; // || $userField.val().length === 0;
+    // var chirpisEmpty = $chirpField.val().length === 0;  //returns true or false
+    // var userisEmpty = $userField.val().length === 0;
+    // if ($chirpField.val().length === 0) {
+    //     $chirpButton.prop('disabled', true);
+    // } else if ($userField.val().length === 0) {
     //     $chirpButton.prop('disabled', true);
     // } else {
     //     $chirpButton.prop('disabled', false);
     // }
     $chirpButton.prop('disabled', isEmpty);
+    // $chirpButton.prop('disabled', chirpisEmpty);
+    // $chirpButton.prop('disabled', userisEmpty);
 });
+
+
+// $userField.on('input', function() {
+//     var isEmpty = $userField.val().length === 0;
+//     $chirpButton.prop('disabled', isEmpty);
+// });
+
 $chirpButton.click(postChirp);  //when clicked run this function
 
 function postChirp() {
     var chirp = {
     message: $chirpField.val(), //gets whatever is typed in chirpField
-    user: 'Patricia',
+    // user: 'Patricia',
+    user: $userField.val(),
     timestamp: new Date().toISOString()   
     }; 
     $.ajax({
@@ -28,6 +43,7 @@ function postChirp() {
         //successfully posted new data to the server
         //get them all again to add to in case others added chirps
         $chirpField.val('');
+        $userField.val('');
         $chirpButton.prop('disabled', true);
         getChirps();
     }, function(err) {   //if rejects will skip above and run 
@@ -41,9 +57,10 @@ function getChirps() {
         url: `/api/chirps`  //leave off the domain name to make it any
     }).then(function(chirps){
         $chirpList.empty();
-        for(var i = 0; i < chirps.length; i++) {
-            var $chirpdiv = $('<div class="chirp"></div>');  //cretes div
-            var $message = $('<p></p>');
+        $userField.empty();
+        for(var i = 0; i < chirps.length ; i++) {
+            var $chirpdiv = $('<div class="chirp"></div>');  //creates div
+            var $message = $('<h1></h1>');
             var $user = $('<h4></h4>');
             var $timestamp = $('<h5></h5>');
 
