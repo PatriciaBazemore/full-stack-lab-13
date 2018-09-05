@@ -58,7 +58,8 @@ function getChirps() {
     }).then(function(chirps){
         $chirpList.empty();
         $userField.empty();
-        for(var i = 0; i < chirps.length ; i++) {
+        // for(var i = 0; i < chirps.length ; i++) { put the newest at the bottom
+        for(var i = chirps.length-1; 0 < i ; i--) {    //reversed it to make the most recent be at the top 
             var $chirpdiv = $('<div class="chirp"></div>');  //creates div
             var $message = $('<h1></h1>');
             var $user = $('<h4></h4>');
@@ -76,23 +77,16 @@ function getChirps() {
 
             //$chirpdiv.text(success[i].title); //puts text of chirp in div
             //$('body').append($chirpdiv); //puts div in body
+            
      }
+     
     }, function(err) {
         console.log(err);
     });
-}
-getChirps();       
+};
+getChirps();  
 
-// (document).ready(function() {
-//      $(':input[type="text"]').prop('disabled', true);
-//      $('input[type="text"]').keyup(function() {
-//         if($(this).val() != '') {
-//            $(':input[type="text"]').prop('disabled', false);
-//         }
-//      });
-//  });
 
- 
 
 // $("button").click(function(){
 //     var newChirp = JSON.stringify(sendInfo)
